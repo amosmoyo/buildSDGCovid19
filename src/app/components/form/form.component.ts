@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from 'src/app/service.service';
 
 @Component({
   selector: 'app-form',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
   new;
-  constructor() { }
+  constructor(private service: ServiceService) { }
 
   ngOnInit() {
   }
@@ -16,6 +17,9 @@ export class FormComponent implements OnInit {
     if (formvalue.invalid) {
       return;
     }
+
+    this.service.getData(formvalue.value);
+    formvalue.resetForm();
   }
 
 }

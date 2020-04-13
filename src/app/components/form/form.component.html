@@ -1,14 +1,14 @@
 <div  class="center">
+
   <div class="row">
     <div class="col-md-12">
       <form autocomplete="off" novalidate #postForm = "ngForm" (ngSubmit)='onsubmit(postForm)'>
         <div ngModelGroup="region">
 
-          <mat-form-field class="FormGroup"
-          >
+          <mat-form-field class="FormGroup">
             <input type="text"
                    ngModel
-                   name="regionName"
+                   name="name"
                    matInput
                    #region = "ngModel"
                    class="formcontrols"
@@ -169,6 +169,7 @@
         <button type="button"
                 mat-raised-button
                 color="accent"
+                (click)="postForm.resetForm({})"
         >Cancel</button>
       </form>
     </div>
