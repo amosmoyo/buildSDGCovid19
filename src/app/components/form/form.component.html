@@ -15,9 +15,10 @@
                    placeholder="Region Name"
                    required
                    data-regionName
+                   aria-describedby="region"
             >
             <mat-error *ngIf="region.invalid && (region.dirty || region.touched)">
-              <mat-error *ngIf="region.errors.required">
+              <mat-error *ngIf="region.errors.required" id="region">
                 name is required.
               </mat-error>
             </mat-error>
@@ -98,6 +99,7 @@
                  required
                  placeholder="Time to Elapse as per periodType"
                  data-time-to-elapse
+                 aria-labelledby="timeToElapselabel"
           />
           <mat-error *ngIf="timeToElapsee.invalid && (timeToElapsee.dirty || timeToElapsee.touched)">
             <mat-error *ngIf="timeToElapsee.errors.required">

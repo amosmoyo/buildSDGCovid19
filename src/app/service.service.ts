@@ -12,6 +12,5 @@ export class ServiceService {
 
   getData(data: Iobject ) {
     this.obj = data;
-    console.log('amos', this.obj);
   }
 }
