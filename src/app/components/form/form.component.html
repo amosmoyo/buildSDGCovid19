@@ -6,6 +6,7 @@
         <div ngModelGroup="region">
 
           <mat-form-field class="FormGroup">
+            <mat-label for="name"></mat-label>
             <input type="text"
                    ngModel
                    name="name"
@@ -14,11 +15,11 @@
                    class="formcontrols"
                    placeholder="Region Name"
                    required
-                   data-regionName
-                   aria-describedby="region"
+                   aria-labelledby="namelabel"
+                   data-regionNama
             >
             <mat-error *ngIf="region.invalid && (region.dirty || region.touched)">
-              <mat-error *ngIf="region.errors.required" id="region">
+              <mat-error *ngIf="region.errors.required">
                 name is required.
               </mat-error>
             </mat-error>
@@ -81,7 +82,7 @@
 
         <mat-form-field class="FormGroup" id="end">
           <mat-label for="periodType">Period Type</mat-label>
-          <mat-select (ngModel)="new.periodType" name="periodType" class="formcontrols" data-period-type>
+          <mat-select (ngModel)="new.periodType" name="periodType" class="formcontrols" data-period-type id="periodType">
             <mat-option value="days">Days</mat-option>
             <mat-option value="weeks">Weeks</mat-option>
             <mat-option value="months">Months</mat-option>
@@ -170,7 +171,6 @@
 
         <button type="button"
                 mat-raised-button
-                color="accent"
                 (click)="postForm.resetForm({})"
         >Cancel</button>
       </form>
