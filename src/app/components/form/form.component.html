@@ -82,7 +82,8 @@
           <mat-label for="periodType">Period Type</mat-label>
           <mat-select (ngModel)="new.periodType" name="periodType" class="formcontrols"
                       data-period-type id="periodType"
-                      role="listbox" tabindex="0"
+                      role="listbox" tabindex="0" aria-labelledby="mat-form-field-label-9"
+                      aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false"
           >
             <mat-option value="days" role="option" aria-selected="false">Days</mat-option>
             <mat-option value="weeks" role="option" aria-selected="false">Weeks</mat-option>
