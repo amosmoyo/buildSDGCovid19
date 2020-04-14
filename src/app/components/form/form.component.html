@@ -14,7 +14,6 @@
                    #region = "ngModel"
                    class="formcontrols"
                    required
-                   aria-labelledby="regionNamelabel"
                    data-regionNama
             >
             <mat-error *ngIf="region.invalid && (region.dirty || region.touched)">
@@ -33,7 +32,6 @@
                   class="formcontrols"
                   #avgAgee = "ngModel"
                   required
-                  aria-labelledby="avgAgelabel"
                   data-avgAge
             />
             <mat-error *ngIf="avgAgee.invalid && (avgAgee.dirty || avgAgee.touched)">
@@ -52,7 +50,6 @@
                   class="formcontrols"
                   #avgDailyIncomeInUSDD = "ngModel"
                   required
-                  aria-labelledby="avgDailyIncomeInUSD"
                   data-avgDailyIncomeInUSD
             />
             <mat-error *ngIf="avgDailyIncomeInUSDD.invalid && (avgDailyIncomeInUSDD.dirty || avgDailyIncomeInUSDD.touched)">
@@ -71,7 +68,6 @@
                    #avgDailyIncomePopulationn = 'ngModel'
                    class="formcontrols"
                    required
-                   aria-labelledby="avgDailyIncomePopulation"
                    data-avgDailyIncomePopulation
             />
             <mat-error *ngIf="avgDailyIncomePopulationn.invalid && (avgDailyIncomePopulationn.dirty || avgDailyIncomePopulationn.touched)">
@@ -84,10 +80,13 @@
 
         <mat-form-field class="FormGroup" id="end">
           <mat-label for="periodType">Period Type</mat-label>
-          <mat-select (ngModel)="new.periodType" name="periodType" class="formcontrols" data-period-type id="periodType">
-            <mat-option value="days">Days</mat-option>
-            <mat-option value="weeks">Weeks</mat-option>
-            <mat-option value="months">Months</mat-option>
+          <mat-select (ngModel)="new.periodType" name="periodType" class="formcontrols"
+                      data-period-type id="periodType"
+                      role="listbox" tabindex="0"
+          >
+            <mat-option value="days" role="option" aria-selected="false">Days</mat-option>
+            <mat-option value="weeks" role="option" aria-selected="false">Weeks</mat-option>
+            <mat-option value="months" role="option" aria-selected="false">Months</mat-option>
           </mat-select>
         </mat-form-field>
 
@@ -101,7 +100,6 @@
                  class="formcontrols"
                  required
                  data-time-to-elapse
-                 aria-labelledby="timeToElapselabel"
           />
           <mat-error *ngIf="timeToElapsee.invalid && (timeToElapsee.dirty || timeToElapsee.touched)">
             <mat-error *ngIf="timeToElapsee.errors.required">
@@ -117,7 +115,6 @@
                  name="reportedCases"
                  matInput
                  #reportedCasess = "ngModel"
-                 aria-labelledby="reportedCases"
                  class="formcontrols"
                  data-reported-cases
           />
@@ -136,7 +133,6 @@
                  matInput
                  #populationn = "ngModel"
                  required
-                 aria-labelledby="population"
                  class="formcontrols"
                  data-population
           />
@@ -154,7 +150,6 @@
                  name="totalHospitalBeds"
                  matInput
                  #totalHospitalBedss = "ngModel"
-                 aria-labelledby="totalHospitalBeds"
                  required
                  class="formcontrols"
                  data-total-hospital-beds
