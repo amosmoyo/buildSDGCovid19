@@ -44,9 +44,6 @@
 #end{
   margin-bottom:20px;
 }
-em{
-  color: red;
-}
 mat-error{
   font-size: .9em; font-style: italic;
 }
