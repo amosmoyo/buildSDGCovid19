@@ -4,18 +4,17 @@
     <div class="col-md-12">
       <form autocomplete="off" novalidate #postForm = "ngForm" (ngSubmit)='onsubmit(postForm)'>
         <div ngModelGroup="region">
-
+         <br>
           <mat-form-field class="FormGroup">
-            <mat-label for="name"></mat-label>
+            <mat-label for="regionName">Region Name</mat-label>
             <input type="text"
                    ngModel
-                   name="name"
+                   name="regionName"
                    matInput
                    #region = "ngModel"
                    class="formcontrols"
-                   placeholder="Region Name"
                    required
-                   aria-labelledby="namelabel"
+                   aria-labelledby="regionNamelabel"
                    data-regionNama
             >
             <mat-error *ngIf="region.invalid && (region.dirty || region.touched)">
@@ -26,6 +25,7 @@
           </mat-form-field>
 
           <mat-form-field class="FormGroup">
+            <mat-label for="avgAge">Avarage Age</mat-label>
             <input type="number"
                   ngModel
                   name="avgAge"
@@ -33,7 +33,7 @@
                   class="formcontrols"
                   #avgAgee = "ngModel"
                   required
-                  placeholder="Avarage Age"
+                  aria-labelledby="avgAgelabel"
                   data-avgAge
             />
             <mat-error *ngIf="avgAgee.invalid && (avgAgee.dirty || avgAgee.touched)">
@@ -44,6 +44,7 @@
           </mat-form-field>
 
           <mat-form-field class="FormGroup">
+            <mat-label for="avgDailyIncomeInUSD">Avarage Daily Income in $</mat-label>
             <input type="number"
                   ngModel
                   name="avgDailyIncomeInUSD"
@@ -51,7 +52,7 @@
                   class="formcontrols"
                   #avgDailyIncomeInUSDD = "ngModel"
                   required
-                  placeholder="Avarage Daily Income in $"
+                  aria-labelledby="avgDailyIncomeInUSD"
                   data-avgDailyIncomeInUSD
             />
             <mat-error *ngIf="avgDailyIncomeInUSDD.invalid && (avgDailyIncomeInUSDD.dirty || avgDailyIncomeInUSDD.touched)">
@@ -62,6 +63,7 @@
           </mat-form-field>
 
           <mat-form-field class="FormGroup">
+            <mat-label for="avgDailyIncomePopulation">Avarage Daily Income of the Population</mat-label>
             <input type="number"
                    ngModel
                    name="avgDailyIncomePopulation"
@@ -69,7 +71,7 @@
                    #avgDailyIncomePopulationn = 'ngModel'
                    class="formcontrols"
                    required
-                   placeholder="Avarage Daily Income of the Population"
+                   aria-labelledby="avgDailyIncomePopulation"
                    data-avgDailyIncomePopulation
             />
             <mat-error *ngIf="avgDailyIncomePopulationn.invalid && (avgDailyIncomePopulationn.dirty || avgDailyIncomePopulationn.touched)">
@@ -90,7 +92,7 @@
         </mat-form-field>
 
         <mat-form-field class="FormGroup">
-          <mat-label for="timeToElapse">Time to Elapse</mat-label><br>
+          <mat-label for="timeToElapse">Time to Elapse as per periodType</mat-label><br>
           <input type="number"
                  ngModel
                  name="timeToElapse"
@@ -98,7 +100,6 @@
                  #timeToElapsee = "ngModel"
                  class="formcontrols"
                  required
-                 placeholder="Time to Elapse as per periodType"
                  data-time-to-elapse
                  aria-labelledby="timeToElapselabel"
           />
@@ -110,12 +111,13 @@
         </mat-form-field>
 
         <mat-form-field class="FormGroup">
+          <mat-label for="reportedCases">What are reported estimated cases?</mat-label>
           <input type="number"
                  ngModel
                  name="reportedCases"
                  matInput
                  #reportedCasess = "ngModel"
-                 placeholder="What are reported estimated cases? "
+                 aria-labelledby="reportedCases"
                  class="formcontrols"
                  data-reported-cases
           />
@@ -127,13 +129,14 @@
         </mat-form-field>
 
         <mat-form-field class="FormGroup">
+          <mat-label for="population">Whats the overroll population?</mat-label>
           <input type="number"
                  ngModel
                  name="population"
                  matInput
                  #populationn = "ngModel"
                  required
-                 placeholder="Whats the overroll population?"
+                 aria-labelledby="population"
                  class="formcontrols"
                  data-population
           />
@@ -145,12 +148,13 @@
         </mat-form-field>
 
         <mat-form-field class="FormGroup">
+          <mat-label for="totalHospitalBeds">Total hostital beds</mat-label>
           <input type="number"
                  ngModel
                  name="totalHospitalBeds"
                  matInput
                  #totalHospitalBedss = "ngModel"
-                 placeholder="Total hostital beds"
+                 aria-labelledby="totalHospitalBeds"
                  required
                  class="formcontrols"
                  data-total-hospital-beds
