@@ -82,12 +82,12 @@
           <mat-label for="periodType">Period Type</mat-label>
           <mat-select (ngModel)="new.periodType" name="periodType" class="formcontrols"
                       data-period-type id="periodType"
-                      role="munu" tabindex="0" aria-labelledby="mat-form-field-label-9"
+                      role="tablist"  aria-labelledby="mat-form-field-label-9"
                       aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false"
           >
-            <mat-option value="days" role="option" aria-selected="false">Days</mat-option>
-            <mat-option value="weeks" role="option" aria-selected="false">Weeks</mat-option>
-            <mat-option value="months" role="option" aria-selected="false">Months</mat-option>
+            <mat-option value="days" role="tab" tabindex="-1" aria-controls="tab-1-pane" aria-selected="false">Days</mat-option>
+            <mat-option value="weeks" role="tab" tabindex="-1" aria-controls="tab-2-pane"  aria-selected="false">Weeks</mat-option>
+            <mat-option value="months" role="tab" tabindex="-1"  aria-selected="false" aria-controls="tab-3-pane">Months</mat-option>
           </mat-select>
         </mat-form-field>
 
