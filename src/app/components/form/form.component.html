@@ -78,23 +78,22 @@
           </mat-form-field>
         </div>
 
-        <mat-form-field class="FormGroup" id="end">
-          <mat-label for="periodType">Period Type</mat-label>
-          <mat-select ngModel
+        <div class="FormGroup" id="end">
+          <label for="periodType">Period Type</label>
+          <select     ngModel
                       name="periodType"
                       class="formcontrols"
                       data-period-type
                       id="periodType"
                       #periodType = "ngModel"
-                      role="tablist"
           >
 
-            <mat-option value="days"   role="tab"  aria-selected="false">Days</mat-option>
-            <mat-option value="weeks"  role="tab"  aria-selected="false">Weeks</mat-option>
-            <mat-option value="months" role="tab"  aria-selected="false">Months</mat-option>
+            <option value="days"   aria-selected="false">Days</option>
+            <option value="weeks"  aria-selected="false">Weeks</option>
+            <option value="months" aria-selected="false">Months</option>
 
-          </mat-select>
-        </mat-form-field>
+          </select>
+        </div>
 
         <mat-form-field class="FormGroup">
           <mat-label for="timeToElapse">Time to elapse as per periodType</mat-label><br>
